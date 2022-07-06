@@ -7,6 +7,7 @@ const port = process.env.PORT || 5000
 
 const mongoose = require('mongoose');
 const apartmentsApi = require('./apartmentsApi/apartmentsApi')
+const reviewApi = require('./reviewApi/reviewApi')
 
 // middleware 
 app.use(cors())
@@ -30,7 +31,8 @@ const run = async () => {
 
 run()
 
-app.use('/apartment', apartmentsApi)
+app.use('/apartments', apartmentsApi)
+app.use('/reviews', reviewApi)
 
 app.get('/', async (req, res) => {
     res.send('Server running')

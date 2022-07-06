@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const reviewScheama = mongoose.Schema({
+const reviewSchema = mongoose.Schema({
 
     name: {
         require: true,
@@ -15,12 +15,12 @@ const reviewScheama = mongoose.Schema({
     },
     country: {
         require: true,
-        type: Number
+        type: String
 
     },
     rating: {
         require: true,
-        type: number
+        type: Number
     },
     date: {
         type: Date,
@@ -29,6 +29,4 @@ const reviewScheama = mongoose.Schema({
 }
 )
 
-
-
-module.exports = reviewScheama;
+module.exports = reviewSchema;

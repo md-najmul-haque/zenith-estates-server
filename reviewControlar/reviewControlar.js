@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
-const reviewScheama = require('../model/reviewSchemea');
-const Reviews = mongoose.model('review', reviewScheama);
+const reviewSchema = require('../model/reviewSchema');
+const Reviews = mongoose.model('review', reviewSchema);
 
 exports.getReviews = async (req, res) => {
     try {
         const result = await Reviews.find({});
+        console.dir(result);
         res.send(result);
 
     }
