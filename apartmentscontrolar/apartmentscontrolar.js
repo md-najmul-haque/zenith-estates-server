@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const apartmentsSchema = require('../model/apartments.schemea');
+const apartmentsSchema = require('../model/apartmentsSchema');
 const Apartments = mongoose.model('apartment', apartmentsSchema)
 exports.getApartments = async (req, res) => {
     try {
